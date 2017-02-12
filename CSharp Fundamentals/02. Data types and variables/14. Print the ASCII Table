@@ -1,0 +1,12 @@
+using System;
+
+class printASCIItable
+{
+    static void Main()
+    {
+        for (char ASCII = (char)033; ASCII <= (char)126; ASCII++)
+        {
+            Console.Write(ASCII);
+        }
+    }
+}
