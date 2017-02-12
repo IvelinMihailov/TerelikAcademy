@@ -1,0 +1,22 @@
+using System;
+
+class ComparingFloats
+{
+    static void Main()
+    {
+        var number1 = double.Parse(Console.ReadLine());
+        var number2 = double.Parse(Console.ReadLine());
+
+        var eps = 0.000001f;
+
+        if ((Math.Abs(number1 - number2) < eps))
+        {
+            Console.WriteLine("true");
+        }
+        else
+        {
+            Console.WriteLine("false");
+        }
+    }
+}
+
