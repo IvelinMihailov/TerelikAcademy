@@ -1,0 +1,22 @@
+using System;
+
+class Calculate
+{
+    static void Main()
+    {
+        sbyte n = sbyte.Parse(Console.ReadLine());
+        double x = double.Parse(Console.ReadLine());
+
+        double factoriel = 1;
+        double sum = 1;
+
+        for (int i = 1; i <= n; i++)
+        {
+            factoriel *= i;
+            sum += (factoriel / (Math.Pow(x, i)));
+        }
+
+        Console.WriteLine("{0:F5}", sum);
+    }
+}
+
