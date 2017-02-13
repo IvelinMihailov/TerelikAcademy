@@ -1,0 +1,13 @@
+using System;
+
+class BitExchange
+{
+    static void Main()
+    {
+        uint n = uint.Parse(Console.ReadLine());
+
+        n = ((~(7u << 24 | 7u << 3)) & n) | (((n & (7u << 3)) << 21) | ((n & (7u << 24)) >> 21));//Swap bits 3,4,5 with 24,26,26
+
+        Console.WriteLine(n);
+    }
+}
