@@ -1,0 +1,20 @@
+using System;
+
+class ExchangeNumbers
+{
+    static void Main()
+    {
+        int a = int.Parse(Console.ReadLine());
+        int b = int.Parse(Console.ReadLine());
+
+        if (a < b)
+        {
+            Console.Write(a + " " + b);
+        }
+        else
+        {
+            Console.Write(b + " " + a);
+        }
+    }
+}
+
