@@ -1,0 +1,26 @@
+
+using System;
+using System.Numerics;
+
+class Program
+{
+    static void Main()
+    {
+        BigInteger n = BigInteger.Parse(Console.ReadLine());
+        double sum = 0;
+        int counter = 0;
+        double sqrt2 = 0;
+
+        while (n != 0)
+        {
+            sqrt2 = (Math.Pow(2, counter));
+            if (n % 10 != 0)
+            {
+                sum = sum + sqrt2;
+            }
+            n = n / 10;
+            counter++;
+        }
+        Console.WriteLine(sum);
+    }
+}
