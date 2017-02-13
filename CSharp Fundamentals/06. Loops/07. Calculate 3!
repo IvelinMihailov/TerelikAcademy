@@ -1,0 +1,43 @@
+using System;
+
+using System.Numerics;
+
+class Calculate3Fact
+{
+    static void Main()
+    {
+        BigInteger Nfact = BigInteger.Parse(Console.ReadLine());
+        BigInteger Kfact = BigInteger.Parse(Console.ReadLine());
+
+        BigInteger diff = Nfact - Kfact;
+        BigInteger fact1 = 1;
+        BigInteger fact2 = 1;
+        BigInteger factDiffrence = 1;
+        BigInteger sum = 0;
+
+
+        for (BigInteger i = Nfact; i > 1; i--)
+        {
+            fact1 = fact1 * i;
+
+        }
+
+        for (BigInteger i = Kfact; i > 1; i--)
+        {
+            fact2 = fact2 * i;
+
+        }
+
+        for (BigInteger i = diff; i > 1; i--)
+        {
+            factDiffrence = factDiffrence * i;
+
+        }
+
+        sum = fact1 / (fact2 * factDiffrence);
+
+        Console.WriteLine(sum);
+
+    }
+}
+
