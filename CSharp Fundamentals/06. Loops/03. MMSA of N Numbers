@@ -1,0 +1,36 @@
+using System;
+
+class MMSAofNnumbers
+{
+    static void Main()
+    {
+        double n = double.Parse(Console.ReadLine());
+
+        double max = -10000;
+        double min = 10000;
+
+        double avg = 0;
+        double sum = 0;
+
+        for (double i = 0; i < n; i++)
+        {
+            double number = double.Parse(Console.ReadLine());
+            sum = sum + number;
+            avg = sum / n;
+
+            if (number > max)
+            {
+                max = number;
+            }
+
+            if (number < min)
+            {
+                min = number;
+            }
+        }
+        Console.WriteLine("min={0:f2}", min);
+        Console.WriteLine("max={0:f2}", max);
+        Console.WriteLine("sum={0:f2}", sum);
+        Console.WriteLine("avg={0:f2}", avg);
+    }
+}
