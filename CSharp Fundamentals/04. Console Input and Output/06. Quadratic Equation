@@ -1,0 +1,42 @@
+using System;
+
+class QuadraticEquation
+{
+    static void Main()
+    {
+        double a = double.Parse(Console.ReadLine());
+        double b = double.Parse(Console.ReadLine());
+        double c = double.Parse(Console.ReadLine());
+
+        double root;
+        double root1;
+        double root2;
+
+        double D = (b * b) - 4 * a * c;
+        if (D > 0)
+        {
+            root1 = (-b - Math.Sqrt(D)) / (2 * a);
+            root2 = (-b + Math.Sqrt(D)) / (2 * a);
+            if (root1 < root2)
+            {
+                Console.WriteLine("{0:f2}", root1);
+                Console.WriteLine("{0:f2}", root2);
+            }
+            else
+            {
+                Console.WriteLine("{0:f2}", root2);
+                Console.WriteLine("{0:f2}", root1);
+            }
+
+        }
+        else if (D == 0)
+        {
+            root = -b / (2 * a);
+            Console.WriteLine("{0:f2}", root);
+        }
+        else //if (D < 0)
+        {
+            Console.WriteLine("no real roots");
+        }
+    }
+}
