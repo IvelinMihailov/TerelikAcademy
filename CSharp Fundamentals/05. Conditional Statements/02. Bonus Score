@@ -1,0 +1,35 @@
+using System;
+
+
+class BonusScore
+{
+    static void Main()
+    {
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        if (0 < num && num < 10)
+        {
+            if (1 <= num && num <= 3)
+            {
+                int sum1 = num * 10;
+                Console.WriteLine(sum1);
+            }
+
+            if (4 <= num && num <= 6)
+            {
+                int sum2 = num * 100;
+                Console.WriteLine(sum2);
+            }
+
+            if (7 <= num && num <= 9)
+            {
+                int sum3 = num * 1000;
+                Console.WriteLine(sum3);
+            }
+        }
+        else
+        {
+            Console.WriteLine("invalid score");
+        }
+    }
+}
