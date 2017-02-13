@@ -1,0 +1,19 @@
+using System;
+
+class SumOfNNumbers
+{
+    static void Main()
+    {
+        int numbers =int.Parse(Console.ReadLine());
+        double sumOfEnterNumbers = 0;
+
+        for (int i = 0; i < numbers; i++)
+        {
+            int enterNumber = int.Parse(Console.ReadLine());
+            sumOfEnterNumbers = sumOfEnterNumbers + enterNumber;
+        }
+
+        Console.WriteLine(sumOfEnterNumbers);
+    }
+}
+
