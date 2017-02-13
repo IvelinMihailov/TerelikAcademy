@@ -1,0 +1,27 @@
+using System;
+
+public class ThirdDigit
+{
+    public static void Main()
+    {
+        int number =int.Parse(Console.ReadLine());
+        int counter = 0;
+
+        while (counter!=2)
+        {
+            number = number / 10;
+            counter++;
+        }
+
+        int remainder = number % 10;
+
+        if (remainder == 7)
+        {
+            Console.WriteLine("true");
+        }
+        else
+        {
+            Console.WriteLine("false {0}", remainder);
+        }      
+    }
+}
