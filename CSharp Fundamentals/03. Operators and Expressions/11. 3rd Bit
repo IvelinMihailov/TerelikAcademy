@@ -1,0 +1,21 @@
+using System;
+
+class _3rtBit
+{
+    static void Main()
+    {
+        int num = int.Parse(Console.ReadLine());
+        int bit3 = 8;
+        int numAndBit3 = num & bit3;
+
+        if (numAndBit3 > 0)
+        {
+            Console.WriteLine("1");
+        }
+        else
+        {
+            Console.WriteLine("0");
+        }
+    }
+}
+
