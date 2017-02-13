@@ -1,0 +1,22 @@
+using System;
+
+class GCD
+{
+    static void Main()
+    {
+        var number = Console.ReadLine().Split(' ');
+        int num1 = int.Parse(number[0]);
+        int num2 = int.Parse(number[1]);
+
+        int greater = Math.Max(num1, num2);
+        int losser = Math.Min(num1, num2);
+
+        while (losser != 0)
+        {
+            int remainder = greater % losser;
+            greater = losser;
+            losser = remainder;
+        }
+        Console.WriteLine(greater);
+    }
+}
