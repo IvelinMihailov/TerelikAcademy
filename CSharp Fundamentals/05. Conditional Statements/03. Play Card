@@ -1,0 +1,29 @@
+using System;
+
+    class PlayCard
+    {
+        static void Main()
+        {
+        string enterOnConsole = Console.ReadLine();
+
+        switch (enterOnConsole)
+        {
+            case "2":  Console.WriteLine("yes "+ enterOnConsole);break;
+            case "3":  Console.WriteLine("yes " + enterOnConsole); break;
+            case "4":  Console.WriteLine("yes " + enterOnConsole); break;
+            case "5":  Console.WriteLine("yes " + enterOnConsole); break;
+            case "6":  Console.WriteLine("yes " + enterOnConsole); break;
+            case "7":  Console.WriteLine("yes " + enterOnConsole); break;
+            case "8":  Console.WriteLine("yes " + enterOnConsole); break;
+            case "9":  Console.WriteLine("yes " + enterOnConsole); break;
+            case "10": Console.WriteLine("yes " + enterOnConsole); break;
+            case "J":  Console.WriteLine("yes " + enterOnConsole); break;
+            case "Q":  Console.WriteLine("yes " + enterOnConsole); break;
+            case "K":  Console.WriteLine("yes " + enterOnConsole); break;
+            case "A":  Console.WriteLine("yes " + enterOnConsole); break;
+            default:   Console.WriteLine("no "+ enterOnConsole); break;
+                              
+        }
+        
+    }
+}
