@@ -1,0 +1,32 @@
+using System;
+
+class BiggestOf3
+{
+    static void Main()
+    {
+        double a = double.Parse(Console.ReadLine());
+        double b = double.Parse(Console.ReadLine());
+        double c = double.Parse(Console.ReadLine());
+
+        double num1 = Math.Max(a, b);
+        double num2 = Math.Max(a, c);
+        double num3 = Math.Max(b, c);
+
+        if (a > b && a > c && a > num3)
+        {
+            Console.WriteLine(a);
+        }
+        else if (b > a && b > c && b > num2)
+        {
+            Console.WriteLine(b);
+        }
+        else if (c > a && c > b && c > num1)
+        {
+            Console.WriteLine(c);
+        }
+        else if (a == b && a == c && b == c)
+        {
+            Console.WriteLine(a);
+        }
+    }
+}
