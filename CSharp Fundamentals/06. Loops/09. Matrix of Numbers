@@ -1,0 +1,19 @@
+using System;
+
+class MatrixOfNumbers
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+
+        for (int rows = 1; rows <= n; rows++)
+        {
+            for (int cols = rows; cols < n + rows; cols++)
+            {
+                Console.Write("{0} ", cols);
+            }
+            Console.WriteLine();
+
+        }
+    }
+}
