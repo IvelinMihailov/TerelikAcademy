@@ -1,0 +1,36 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        var number = int.Parse(Console.ReadLine());
+        var prime = true;
+
+        if (number < 2)
+        {
+            prime = false;
+        }
+        else
+        {
+            for (var i = 2; i <= Math.Sqrt(number); i++)
+            {
+                if (number % i == 0)
+                {
+                    prime = false;
+                    break;
+                }
+            }
+        }
+
+        //Console.WriteLine(prime);  
+        if (prime)
+        {
+            Console.WriteLine("true");
+        }
+        else
+        {
+            Console.WriteLine("false");
+        }      
+    }
+}
