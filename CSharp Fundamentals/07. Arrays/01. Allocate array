@@ -1,9 +1,9 @@
 
 using System;
 
-class Increasing4Numbers
+public class Increasing4Numbers
 {
-    static void Main()
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         int[] array = new int[n];
