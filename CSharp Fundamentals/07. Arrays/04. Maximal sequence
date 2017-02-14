@@ -1,0 +1,37 @@
+using System;
+using System.Linq;
+
+public class MaximalSequence
+{
+    public static void Main()
+    {
+        int arraylenght =int.Parse(Console.ReadLine());
+        int[] array = new int[arraylenght];
+
+        for (int i = 0; i < arraylenght; i++)
+        {
+            array[i] =int.Parse(Console.ReadLine());
+        }
+
+        int maxLenght = 1;
+        int currenLenght = 1;
+
+        for (int i = 1; i < array.Length; i++)
+        {
+            if (array[i - 1]==array[i])
+            {
+                currenLenght++;
+                if (currenLenght>maxLenght)
+                {
+                    maxLenght = currenLenght;
+                }   
+            }
+            else
+            {
+                currenLenght = 1;
+            }
+        }
+
+        Console.WriteLine(maxLenght);
+    }
+}
