@@ -1,0 +1,40 @@
+using System;
+
+class FrequentNumber
+{
+    static void Main()
+    {
+        int number = int.Parse(Console.ReadLine());
+
+        var array = new int[number];
+
+        for (int i = 0; i < number; i++)
+        {
+            array[i] = int.Parse(Console.ReadLine());
+        }
+
+        Array.Sort(array);
+        var currenLenght = 1;
+        var maxLenght = 1;
+        var frequentNumber = 0;
+
+        for (int i = 1; i < array.Length; i++)
+        {
+            if (array[i - 1] == array[i])
+            {
+                currenLenght++;
+                if (currenLenght > maxLenght)
+                {
+                    maxLenght = currenLenght;
+                    frequentNumber = array[i];
+                }
+            }
+            else
+            {
+                currenLenght = 1;
+            }
+        }
+
+        Console.WriteLine("{0} ({1} times)",frequentNumber, maxLenght);
+    }
+}
